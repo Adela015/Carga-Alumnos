@@ -51,19 +51,19 @@ class Frame(tk.Frame):
 
         self.entry_nombre = tk.Entry(self)
         self.entry_nombre.config(width = 50, state = 'disabled', font = ('Arial', 12, 'bold'))
-        self.entry_nombre.grid(row = 0, column = 1, padx = 10, pady = 10)
+        self.entry_nombre.grid(row = 0, column = 1, padx = 10, pady = 10, columnspan = 2)
 
         self.entry_domicilio = tk.Entry(self)
         self.entry_domicilio.config(width = 50, state = 'disabled', font = ('Arial', 12, 'bold'))
-        self.entry_domicilio.grid(row = 1, column = 1, padx = 10, pady = 10)
+        self.entry_domicilio.grid(row = 1, column = 1, padx = 10, pady = 1, columnspan = 20)
         
         self.entry_dni = tk.Entry(self)
         self.entry_dni.config(width = 50, state = 'disabled', font = ('Arial', 12, 'bold'))
-        self.entry_dni.grid(row = 2, column = 1, padx = 10, pady = 10)
+        self.entry_dni.grid(row = 2, column = 1, padx = 10, pady = 10, columnspan = 2)
         
         self.entry_edad = tk.Entry(self)
         self.entry_edad.config(width = 50, state = 'disabled', font = ('Arial', 12, 'bold'))
-        self.entry_edad.grid(row = 3, column = 1, padx = 10, pady = 10)
+        self.entry_edad.grid(row = 3, column = 1, padx = 10, pady = 10, columnspan = 2)
         
 ##------------- BOTONES --------------##
 
