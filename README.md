@@ -32,50 +32,50 @@ Este proyecto es un sistema básico de **CRUD** (Crear, Leer, Actualizar, Elimin
 
 carga-alumnos/
 
-├── build
+├── **build**
 
-|    └── localpycs 
+    └── localpycs 
 
-├── client/
+├── **client/**
 
-|    └── _init.py    
+    └── _init.py    
 
-|    └── gui_app.py  
+    └── gui_app.py  
 
-├── database/
+├── **database/**
 
-|   └── alumnos.db
+   └── alumnos.db
 
-├── dist/
+├── **dist/**
 
-|    └── carga-alumnos     
+    └── carga-alumnos     
 
-├── img/   
+├── **img/** 
 
-│   └── cp-logo.ico 
+   └── cp-logo.ico 
 
-├── model/
+├── **model/**
 
-|    └── _ init _.py
+    └── _ init _.py
 
-|    ├── alumnos_dao.py
+    ├── alumnos_dao.py
 
-|    └── _coexion_db.py 
+    └── _coexion_db.py 
 
-├── carga-alumnos.spec
+├── **carga-alumnos.spec**
 
-├── env/
+├── **env/**
 
-|    └── Include/
+    └── Include/
 
-|    └── Lib/
+    └── Lib/
 
-|    └── Scripts/
+    └── Scripts/
 
-|    └── pyvenv.cfg
+    └── pyvenv.cfg
 
 |       
-└── README.md              
+└── **README.md**              
 
 ## Uso
 
