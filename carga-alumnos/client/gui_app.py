@@ -1,10 +1,10 @@
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, messagebox
 from model.alumnos_dao import crear_tabla, borrar_tabla
-from model.alumnos_dao import Alumno, guardar, listar, editar
-from tkinter import messagebox
+from model.alumnos_dao import Alumno, guardar, listar, editar, eliminar
 
 ##-------------- BARRA DEL MENÚ ---------------##
+
 def barra_menu(root):
     barra_menu = tk.Menu(root)
     root.config(menu = barra_menu, width = 300, height = 300)
@@ -108,10 +108,11 @@ class Frame(tk.Frame):
         self.boton_guardar.config(state = 'normal')
         self.boton_cancelar.config(state = 'normal')
     
-##------------- DESHABILITAR CAMPOS Y BOTONES ------------##
-    
+##------------- DESHABILITAR CAMPOS Y BOTONES -----------##
+
     def deshabilitar_campos(self):
         
+        self.id_alumnos = None
         self.mi_nombre.set('')
         self.mi_domicilio.set('')
         self.mi_dni.set('')
@@ -124,7 +125,7 @@ class Frame(tk.Frame):
         
         self.boton_guardar.config(state = 'disabled')
         self.boton_cancelar.config(state = 'disabled')
-        
+
 ##-------------- GUARDAR DATOS EN TABLA --------------##
 
     def guardar_datos(self):
@@ -139,13 +140,14 @@ class Frame(tk.Frame):
             guardar(alumno)
             
         else:
-            editar(alumno, self.id_alumno)
+            editar(alumno, self.id_alumnos)
             
         self.tabla_alumnos()
         
         self.deshabilitar_campos()
 
 ##---------------- TABLA ALUMNOS ------------------##
+
     def tabla_alumnos(self):
         self.lista_alumnos = listar()
         self.lista_alumnos.reverse()
@@ -172,7 +174,7 @@ class Frame(tk.Frame):
         self.boton_editar.config(width = 20, font = ('Arial', 12,'bold'), fg = 'white', bd = 0, bg = '#40E0D0', cursor = 'hand2', activebackground = '#7FFFD4', activeforeground = "white", relief = 'flat')
         self.boton_editar.grid(row = 6, column = 0, padx = 10, pady = 10)
         
-        self.boton_eliminar = tk.Button(self, text = "Eliminar")
+        self.boton_eliminar = tk.Button(self, text = "Eliminar", command = self.eliminar_datos)
         self.boton_eliminar.config(width = 20, font = ('Arial', 12,'bold'), fg = 'white', bd = 0, bg = '#C70039', cursor = 'hand2', activebackground = '#FF0000', activeforeground = "white", relief = 'flat')
         self.boton_eliminar.grid(row = 6, column = 1, padx = 10, pady = 10)
             
@@ -204,5 +206,20 @@ class Frame(tk.Frame):
             
         except:  # noqa: E722
             titulo = 'Edición de datos'
+            mensaje = 'No ha seleccionado ningún registro'
+            messagebox.showerror(titulo, mensaje)
+            
+##------------------ ELIMINAR DATOS -----------------## 
+
+    def eliminar_datos(self):
+        try:
+            self.id_alumnos = self.tabla.item(self.tabla.selection())['text']
+            eliminar(self.id_alumnos)
+            
+            self.tabla_alumnos()
+            self.id_alumnos = None
+
+        except:  # noqa: E722
+            titulo = 'Eliminar un Registro'
             mensaje = 'No ha seleccionado ningún registro'
             messagebox.showerror(titulo, mensaje)

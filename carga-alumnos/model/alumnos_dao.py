@@ -1,4 +1,4 @@
-from conexion_db import ConexionDB
+from model.conexion_db import ConexionDB
 from tkinter import messagebox
 
 ##----------------- CREAR TABLA DB ---------------##
@@ -33,6 +33,7 @@ def borrar_tabla():
     conexion = ConexionDB()
     
     sql = 'DROP TABLE alumnos'
+    
     try:
         conexion.cursor.execute(sql)
         conexion.cerrar()
@@ -97,7 +98,7 @@ def editar(alumno, id_alumnos):
         conexion = ConexionDB()
         
         sql = f"""UPDATE alumnos
-        SET nombre = '{alumno.nombre}', domicilio = '{alumno.domicilio}'
+        SET nombre = '{alumno.nombre}', domicilio = '{alumno.domicilio}',
         dni = '{alumno.dni}', edad = '{alumno.edad}'
         WHERE id_alumnos = '{id_alumnos}'
         """
@@ -110,4 +111,19 @@ def editar(alumno, id_alumnos):
             titulo = 'Edición de datos'
             mensaje = 'No se a podido editar este registro'
             messagebox.showerror(titulo, mensaje)
+
+##------------------ ELIMINAR BASE DE DATOS -----------------## 
+        
+def eliminar(id_alumnos):
+    conexion = ConexionDB()
+    sql = f'DELETE FROM alumnos WHERE id_alumnos = {id_alumnos}'
+    
+    try:
+        conexion.cursor.execute(sql)
+        conexion.cerrar()
+    
+    except:  # noqa: E722
+        titulo = 'Eliminar Datos'
+        mensaje = 'No se pudo eliminar el registro'
+        messagebox.showerror(titulo, mensaje)
             
