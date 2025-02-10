@@ -28,55 +28,6 @@ Este proyecto es un sistema básico de **CRUD** (Crear, Leer, Actualizar, Elimin
   **Librerias:**
 -   **Tkinter**
 
-## Estructura del proyecto
-
-carga-alumnos/
-
-├── **build**
-
-    └── localpycs 
-
-├── **client/**
-
-    └── _init.py    
-
-    └── gui_app.py  
-
-├── **database/**
-
-   └── alumnos.db
-
-├── **dist/**
-
-    └── carga-alumnos     
-
-├── **img/** 
-
-   └── cp-logo.ico 
-
-├── **model/**
-
-    └── _ init _.py
-
-    ├── alumnos_dao.py
-
-    └── _coexion_db.py 
-
-├── **carga-alumnos.spec**
-
-├── **env/**
-
-    └── Include/
-
-    └── Lib/
-
-    └── Scripts/
-
-    └── pyvenv.cfg
-
-|       
-└── **README.md**              
-
 ## Uso
 
 **Agregar un alumno:**
@@ -125,3 +76,29 @@ carga-alumnos/
 - Buscas dentro del a = Analysis --> datas[] y dentro del corchete pones:
 -     datas=[('./img/*.ico', 'img'), ('./database/*.db', 'database')],
 - Ejecutas en el cdmer : pyinstaller carga-alumnos.spec
+
+##  Estructura del proyecto
+```
+carga-alumnos/
+├── build/                  # Carpeta generada automáticamente para builds temporales
+├── localpycs/              # Archivos Python compilados (.pyc)
+├── client/                 # Código del cliente o interfaz de usuario
+│   ├── __init__.py         # Archivo de inicialización del módulo
+│   └── gui_app.py          # Archivo principal de la interfaz gráfica
+├── database/               # Base de datos del proyecto
+│   └── alumnos.db          # Archivo de base de datos SQLite
+├── dist/                   # Carpeta para distribuir el proyecto (ejecutables)
+│   └── carga-alumnos       # Ejecutable generado
+├── img/                    # Imágenes y recursos visuales
+│   └── cp-logo.ico         # Icono de la aplicación
+├── model/                  # Lógica de negocio y acceso a datos
+│   ├── __init__.py         # Archivo de inicialización del módulo
+│   ├── alumnos_dao.py      # Data Access Object (DAO) para manejar alumnos
+│   └── _conexion_db.py     # Conexión a la base de datos
+├── carga-alumnos.spec      # Archivo de configuración para PyInstaller
+├── env/                    # Entorno virtual de Python
+│   ├── Include/            # Incluye archivos de cabecera
+│   ├── Lib/                # Bibliotecas de Python
+│   ├── Scripts/            # Scripts del entorno virtual
+│   └── pyvenv.cfg          # Configuración del entorno virtual
+└── README.md               # Documentación del proyecto
