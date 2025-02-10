@@ -7,20 +7,25 @@ Este proyecto es un sistema básico de **CRUD** (Crear, Leer, Actualizar, Elimin
 
 <img src="carga-alumnos/img/captura.png" alt="Interfaz principal" width="500">
 
-**Agregar alumnos:** Permite ingresar nuevos alumnos con información como nombre, apellido, edad, curso, etc.
+**Agregar alumnos:** 
+-    Permite ingresar nuevos alumnos con información como nombre, apellido, edad, curso, etc.
 
-**Listar alumnos:** Muestra todos los alumnos registrados en la base de datos.
+**Listar alumnos:** 
+-    Muestra todos los alumnos registrados en la base de datos.
 
-**Actualizar alumnos:** Permite modificar la información de un alumno existente.
+**Actualizar alumnos:** 
+-   Permite modificar la información de un alumno existente.
 
-**Eliminar alumnos:** Elimina un alumno de la base de datos.
+**Eliminar alumnos:** 
+-   Elimina un alumno de la base de datos.
 
-**Interfaz gráfica:** Utiliza tkinter para una interfaz amigable y fácil de usar.
+**Interfaz gráfica:** 
+-   Utiliza tkinter para una interfaz amigable y fácil de usar.
 
 ## Tecnologías usadas
 
 - **Python**
-- **Librerias:**
+  **Librerias:**
 -   **Tkinter**
 
 ## Estructura del proyecto
@@ -29,21 +34,21 @@ carga-alumnos/
 
 ├── build
 
-    └── localpycs 
+|    └── localpycs 
 
 ├── client/
 
-    └── _init.py    
+|    └── _init.py    
 
-    └── gui_app.py  
+|    └── gui_app.py  
 
 ├── database/
 
-    └── alumnos.db
+|   └── alumnos.db
 
 ├── dist/
 
-    └── carga-alumnos     
+|    └── carga-alumnos     
 
 ├── img/   
 
@@ -51,23 +56,23 @@ carga-alumnos/
 
 ├── model/
 
-    └── _ init _.py
+|    └── _ init _.py
 
-    ├── alumnos_dao.py
+|    ├── alumnos_dao.py
 
-    └── _coexion_db.py 
+|    └── _coexion_db.py 
 
 ├── carga-alumnos.spec
 
 ├── env/
 
-    └── Include/
+|    └── Include/
 
-    └── Lib/
+|    └── Lib/
 
-    └── Scripts/
+|    └── Scripts/
 
-    └── pyvenv.cfg
+|    └── pyvenv.cfg
 
 |       
 └── README.md              
