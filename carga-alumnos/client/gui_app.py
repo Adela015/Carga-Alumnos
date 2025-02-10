@@ -108,7 +108,7 @@ class Frame(tk.Frame):
         self.boton_guardar.config(state = 'normal')
         self.boton_cancelar.config(state = 'normal')
     
-##------------- DESHABILITAR CAMPOS Y BOTONES -----------##
+##------------- DESHABILITAR CAMPOS Y BOTONES ------------##
     
     def deshabilitar_campos(self):
         
