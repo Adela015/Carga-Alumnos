@@ -5,7 +5,7 @@ Este proyecto es un sistema básico de **CRUD** (Crear, Leer, Actualizar, Elimin
 
 ## Características principales
 
-<img src="img/captura.png" alt="Interfaz principal" width="500">
+<img src="carga-alumnos/img/captura.png" alt="Interfaz principal" width="500">
 
 **Agregar alumnos:** Permite ingresar nuevos alumnos con información como nombre, apellido, edad, curso, etc.
 
@@ -20,31 +20,55 @@ Este proyecto es un sistema básico de **CRUD** (Crear, Leer, Actualizar, Elimin
 ## Tecnologías usadas
 
 - **Python**
+- **Librerias:**
+-   **Tkinter**
 
 ## Estructura del proyecto
 
 carga-alumnos/
+
 ├── build
+
     └── localpycs 
+
 ├── client/
-    └── _init.py                    
-    └── gui_app.py   
-├── database/     
+
+    └── _init.py    
+
+    └── gui_app.py  
+
+├── database/
+
     └── alumnos.db
+
 ├── dist/
-    └── carga-alumnos            
-├── img/                    
+
+    └── carga-alumnos     
+
+├── img/   
+
 │   └── cp-logo.ico 
+
 ├── model/
+
     └── _ init _.py
+
     ├── alumnos_dao.py
-    └── _coexion_db.py  
+
+    └── _coexion_db.py 
+
 ├── carga-alumnos.spec
+
 ├── env/
+
     └── Include/
+
     └── Lib/
+
     └── Scripts/
+
     └── pyvenv.cfg
+
 |       
 └── README.md              
 
