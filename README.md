@@ -25,8 +25,7 @@ Este proyecto es un sistema básico de **CRUD** (Crear, Leer, Actualizar, Elimin
 ## Tecnologías usadas
 
 - **Python**
-- **Librerias:**
--   **Tkinter**
+- **Tkinter**
 
 ## Uso
 
